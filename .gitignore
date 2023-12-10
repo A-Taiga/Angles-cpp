@@ -1,0 +1,7 @@
+.DS_Store
+main
+Makefile
+src/main.cpp
+obj
+.cache
+compile_commands.json
