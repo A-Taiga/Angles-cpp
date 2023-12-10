@@ -22,7 +22,6 @@ namespace angles
 	template<AngleType T>
 	struct Radians
 	{
-		public:
 		T val;
 		constexpr Radians() = default;
 		constexpr Radians(T v);
@@ -46,7 +45,6 @@ namespace angles
 	template<AngleType T>
 	struct Degrees
 	{
-		public:
 		T val;
 
 		constexpr Degrees() = default;
@@ -74,9 +72,8 @@ namespace angles
 	template<AngleType T>
 	struct ArcMinutes
 	{
-		public:
 		T val;
-
+		
 		constexpr ArcMinutes() = default;
 		constexpr ArcMinutes(T v);
 		// cast from Degrees
