@@ -23,7 +23,7 @@ namespace angles
 	struct Radians
 	{
 		T val;
-		
+
 		constexpr Radians() = default;
 		constexpr Radians(T v);
 		// cast from degrees
@@ -144,23 +144,6 @@ concept castType = requires (T v)
 	std::is_same_v<T, angles::Degrees<decltype(v.val)>>
 	|| std::is_same_v<T, angles::Radians<decltype(v.val)>>;
 };
-
-template<castType T>
-T constexpr cast(auto v)
-{
-	if constexpr (std::is_same_v<decltype(v), T>)
-	{
-		return v;
-	}
-	if constexpr (std::is_same_v<decltype(v), angles::Degrees<decltype(v.val)>>)
-	{
-		return (T(v.val * (M_PI/180)));
-	}
-	else if constexpr ( std::is_same_v<decltype(v), angles::Radians<decltype(v.val)>> )
-	{
-		return (T(v.val * (180/M_PI)));
-	}
-}
 
 consteval auto operator "" _degrees(unsigned long long v)
 {
