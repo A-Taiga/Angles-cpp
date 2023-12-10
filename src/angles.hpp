@@ -70,7 +70,7 @@ namespace angles
 
 		constexpr operator T(){return val;}
 	};
-
+	/* not fully implemented */
 	template<AngleType T>
 	struct ArcMinutes
 	{
