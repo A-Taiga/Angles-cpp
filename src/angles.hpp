@@ -23,6 +23,7 @@ namespace angles
 	struct Radians
 	{
 		T val;
+		
 		constexpr Radians() = default;
 		constexpr Radians(T v);
 		// cast from degrees
@@ -73,7 +74,7 @@ namespace angles
 	struct ArcMinutes
 	{
 		T val;
-		
+
 		constexpr ArcMinutes() = default;
 		constexpr ArcMinutes(T v);
 		// cast from Degrees
